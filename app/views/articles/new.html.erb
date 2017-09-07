@@ -1,0 +1,8 @@
+<div class="container">
+<%= simple_form_for @article do |f| %>
+  <%= f.input :title %>
+  <%= f.input :description, as: :text, input_html: {rows: 10, cols: 10} %>
+  <%= f.input :category, placeholder: "Exemple : sport, news, cooking" %>
+  <%= f.button :submit %>
+<% end %>
+</div>
