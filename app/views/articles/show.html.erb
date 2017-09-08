@@ -1,2 +1,10 @@
-<h1>Articles#show</h1>
-<p>Find me in app/views/articles/show.html.erb</p>
+<div class="card" id="show-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+  url('<%= cl_image_path @article.photo %>')">
+  <div class="card-category"><%= @article.category %></div>
+  <div class="card-description">
+    <h2><%= @article.title %></h2>
+  </div>
+</div>
+<div class="container" id="article-description">
+  <p><%= @article.description %></p>
+</div>
