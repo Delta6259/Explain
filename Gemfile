@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 ruby '2.3.4'
 
+gem 'carrierwave', '~> 0.11.2'
+gem 'cloudinary'
 gem 'omniauth-facebook'
 gem "better_errors"
 gem "binding_of_caller"
