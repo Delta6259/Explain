@@ -1,0 +1,23 @@
+<p><%= @email %></p>
+
+
+<div class="container">
+  <div class="row">
+    <% @articles.each do |article| %>
+    <div class="col-xs-12 col-sm-3" id="#card-col">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+        url('<%= cl_image_path article.photo%>')">
+        <div class="card-category"><%= article.category %></div>
+        <div class="card-description">
+          <h2><%= article.title %></h2>
+        </div>
+        <img class="card-user" src="<% if article.user.facebook_picture_url? %> <%= article.user.facebook_picture_url %>
+          <% else %>
+          <%= 'http://modexenergy.com/wp-content/themes/modex_wp/img/avatar.png' %>
+          <% end %>">
+        <%= link_to nil, article_path(article), class: 'card-link' %>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
