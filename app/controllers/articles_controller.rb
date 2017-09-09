@@ -30,6 +30,12 @@ class ArticlesController < ApplicationController
   def destroy
   end
 
+  def sort_by
+    @articles = Article.where(category: params[:category])
+
+    # redirect_back(fallback_location: root_path)
+  end
+
   private
 
   def article_params
