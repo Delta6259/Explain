@@ -1,6 +1,19 @@
 class ArticlesController < ApplicationController
   def index
-    @articles = Article.all
+
+    if params[:find] == "sport"
+      @articles = Article.where(category: "sport")
+    elsif params[:find] == "actualité"
+      @articles = Article.where(category: "actualité")
+    elsif params[:find] == "cinéma"
+      @articles = Article.where(category: "cinéma")
+    elsif params[:find] == "cuisine"
+      @articles = Article.where(category: "cuisine")
+    elsif params[:find] == "informatique"
+      @articles = Article.where(category: "informatique")
+    else
+      @articles = Article.all
+    end
   end
 
   def show
@@ -30,11 +43,7 @@ class ArticlesController < ApplicationController
   def destroy
   end
 
-  def sort_by
-    @articles = Article.where(category: params[:category])
 
-    # redirect_back(fallback_location: root_path)
-  end
 
   private
 
