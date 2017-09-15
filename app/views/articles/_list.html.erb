@@ -1,0 +1,16 @@
+
+<div class="container">
+<div class="row">
+<% @articles.each do |article| %>
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail" id="list">
+      <img src="<%= cl_image_path article.photo%>" alt="..." id="img-list">
+      <div class="caption">
+        <h3>article.title</h3>
+
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
+</div>

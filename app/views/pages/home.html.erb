@@ -1,14 +1,17 @@
-<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 20%), url('https://lionandpanda.com/wp-content/uploads/2015/03/bigstock-Cup-Of-Coffee-Newspaper-Man-72434449-e1427126012821-1747x900.jpg');">
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 20%), url('http://mediashift.org/wp-content/uploads/2014/03/bigstock-Blank-notepad-over-laptop-and-51253441.jpg');">
   <div class="banner-content">
     <h1>EXPLANE</h1>
-    <p>Drop your ideas</p>
-    <form class="form-inline" action='articles' autocomplete="on", id="form_sort">
-      <label class="sr-only" for="inlineFormInput"></label>
-      <%= link_to 'Write', new_article_path, :class => "btn btn-warning btn-lg"%>
-      <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0 input-lg" id="inlineFormInput" name="find" placeholder="Find an article by keyword">
-      <button type="submit" class="btn btn-warning btn-lg">Find</button>
-    </form>
-
+    <p>Find the better article for a specific theme</p>
+    <div class="row">
+      <div class="col xs-12">
+        <form class="form-inline" action='articles' autocomplete="on", id="form_sort">
+          <label class="sr-only" for="inlineFormInput"></label>
+          <%= link_to 'Write', new_article_path, :class => "btn btn-warning btn-lg"%>
+          <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0 input-lg" id="inlineFormInput" name="find" placeholder="Find an article by keyword">
+          <button type="submit" class="btn btn-warning btn-lg">Find</button>
+        </form>
+      </div>
+    </div>
   </div>
 </div>
 
