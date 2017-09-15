@@ -35,19 +35,12 @@ class ArticlesController < ApplicationController
     end
   end
 
-
-
   def upvote
     if Article.increment_counter(:vote, params[:id])
       redirect_back(fallback_location: root_path)
       flash[:notice] =  "Thank you for your vote !"
     end
   end
-
-
-
-
-
 
   private
 
