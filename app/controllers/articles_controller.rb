@@ -27,6 +27,7 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(article_params)
     @article.user = current_user
+    @article.vote = 0
     if @article.save
     redirect_to root_path #A modifier
     else
@@ -34,14 +35,17 @@ class ArticlesController < ApplicationController
     end
   end
 
-  def edit
+
+
+  def upvote
+    if Article.increment_counter(:vote, params[:id])
+      redirect_back(fallback_location: root_path)
+      flash[:notice] =  "Thank you for your vote !"
+    end
   end
 
-  def update
-  end
 
-  def destroy
-  end
+
 
 
 
