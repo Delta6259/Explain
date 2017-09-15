@@ -8,3 +8,6 @@
 <div class="container" id="article-description">
   <p><%= @article.description %></p>
 </div>
+<p>Vote for this article</p>
+<%= link_to "upvote", upvote_path(:id => @article.id), class: 'btn btn-warning' %>
+<p><%= @article.vote %></p>
