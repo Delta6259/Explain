@@ -7,7 +7,7 @@
         <form class="form-inline" action='articles' autocomplete="on", id="form_sort">
           <label class="sr-only" for="inlineFormInput"></label>
           <%= link_to 'Write', new_article_path, :class => "btn btn-warning btn-lg"%>
-          <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0 input-lg" id="inlineFormInput" name="find" placeholder="Find an article by keyword">
+          <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0 input-lg" id="inlineFormInput" name="find" placeholder="Find by keyword">
           <button type="submit" class="btn btn-warning btn-lg">Find</button>
         </form>
       </div>
@@ -15,3 +15,9 @@
   </div>
 </div>
 
+<div class="container">
+  <div class="page-header" id="presentation-profil">
+    <h4> Some exemples you can do </h4>
+  </div>
+  <%= render 'caroussel' %>
+</div>
