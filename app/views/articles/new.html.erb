@@ -1,10 +1,16 @@
 <div class="container">
-<%= simple_form_for @article do |f| %>
-  <%= f.input :title %>
-  <%= f.input :description, as: :text, input_html: {rows: 10, cols: 10} %>
-  <%= f.input :category, placeholder: "Exemple : sport, news, cooking" %>
-  <%= f.input :photo %>
-  <%= f.input :photo_cache, as: :hidden %>
-  <%= f.button :submit %>
-<% end %>
+  <div class="title-new-article" id="presentation-profil">
+    <h4> Need inspiration ? Check for articles of the week</h4>
+  </div>
+  <%= render "../views/pages/top_card" %>
+  <div class="form">
+    <%= simple_form_for @article do |f| %>
+      <%= f.input :title %>
+      <%= f.input :description, as: :text, input_html: {rows: 10, cols: 10} %>
+      <%= f.input :category, placeholder: "Exemple : sport, news, cooking" %>
+      <%= f.input :photo %>
+      <%= f.input :photo_cache, as: :hidden %>
+      <%= f.button :submit %>
+    <% end %>
+  </div>
 </div>

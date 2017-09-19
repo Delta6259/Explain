@@ -1,4 +1,9 @@
 <div class="container">
+
+<div id="presentation-profil">
+  <h4> Your productions </h4>
+</div>
+
   <form class="form-inline" action='articles' autocomplete="on", id="form_sort">
     <label class="sr-only" for="inlineFormInput"></label>
     <%= link_to 'Write', new_article_path, :class => "btn btn-warning btn-lg"%>
@@ -7,8 +12,5 @@
   </form>
 </div>
 
-<div class="page-header" id="presentation-profil">
-  <h4> Your productions </h4>
-</div>
 
 <%= render '../views/articles/card_index' %>
