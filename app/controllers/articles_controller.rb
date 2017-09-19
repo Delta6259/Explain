@@ -21,6 +21,10 @@ class ArticlesController < ApplicationController
   end
 
   def new
+    @article_1 = Article.all.order('vote DESC').first
+    @article_2 = Article.all.order('vote DESC').second
+    @article_3 = Article.all.order('vote DESC').third
+    @article_4 = Article.all.order('vote DESC').fourth
     @article = Article.new
   end
 
