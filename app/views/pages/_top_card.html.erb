@@ -1,0 +1,65 @@
+
+  <div class="row" id="card_home">
+
+    <div class="col-xs-12 col-sm-3" id="#card-col">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+        url('<%= cl_image_path @article_1.photo%>')">
+        <div class="card-category"> <span class="glyphicon glyphicon-heart", aria-hidden="true"> <%= @article_1.vote %></span></div>
+        <div class="card-description">
+          <h4><%= @article_1.title %></h4>
+        </div>
+        <img class="card-user" src="<% if @article_1.user.facebook_picture_url? %> <%= @article_1.user.facebook_picture_url %>
+          <% else %>
+          <%= 'http://modexenergy.com/wp-content/themes/modex_wp/img/avatar.png' %>
+          <% end %>">
+        <%= link_to nil, article_path(@article_1), class: 'card-link' %>
+      </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-3" id="#card-col">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+        url('<%= cl_image_path @article_2.photo%>')">
+        <div class="card-category"> <span class="glyphicon glyphicon-heart", aria-hidden="true"> <%= @article_2.vote %></span></div>
+        <div class="card-description">
+          <h4><%= @article_2.title %></h4>
+        </div>
+        <img class="card-user" src="<% if @article_2.user.facebook_picture_url? %> <%= @article_2.user.facebook_picture_url %>
+          <% else %>
+          <%= 'http://modexenergy.com/wp-content/themes/modex_wp/img/avatar.png' %>
+          <% end %>">
+        <%= link_to nil, article_path(@article_2), class: 'card-link' %>
+      </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-3" id="#card-col">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+        url('<%= cl_image_path @article_3.photo%>')">
+        <div class="card-category"> <span class="glyphicon glyphicon-heart", aria-hidden="true"> <%= @article_3.vote %></span></div>
+        <div class="card-description">
+          <h4><%= @article_3.title %></h4>
+        </div>
+        <img class="card-user" src="<% if @article_3.user.facebook_picture_url? %> <%= @article_3.user.facebook_picture_url %>
+          <% else %>
+          <%= 'http://modexenergy.com/wp-content/themes/modex_wp/img/avatar.png' %>
+          <% end %>">
+        <%= link_to nil, article_path(@article_3), class: 'card-link' %>
+      </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-3" id="#card-col">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+        url('<%= cl_image_path @article_4.photo%>')">
+        <div class="card-category"> <span class="glyphicon glyphicon-heart", aria-hidden="true"> <%= @article_4.vote %></span></div>
+        <div class="card-description">
+          <h4><%= @article_4.title %></h4>
+        </div>
+        <img class="card-user" src="<% if @article_4.user.facebook_picture_url? %> <%= @article_4.user.facebook_picture_url %>
+          <% else %>
+          <%= 'http://modexenergy.com/wp-content/themes/modex_wp/img/avatar.png' %>
+          <% end %>">
+        <%= link_to nil, article_path(@article_4), class: 'card-link' %>
+      </div>
+    </div>
+
+  </div>
+

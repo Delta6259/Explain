@@ -37,9 +37,16 @@ body {
 #avatar-home {
   margin-bottom: 15px;
   margin-left: 55vh;
+  margin-top: 40px;
 }
 
 .prensentation-home {
   margin-left: 45vh;
   margin-bottom: 40px;
+}
+
+#card_home {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
 }
