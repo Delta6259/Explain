@@ -1,0 +1,40 @@
+<!-- <div class="container"> -->
+  <div class="row" id="reviews">
+          <% @reviews.each do |review| %>
+    <div class="col-md-5" id="card-review">
+        <section class="comment-list">
+          <!-- First Comment -->
+          <article class="row">
+            <div class="col-md-2 col-sm-2 hidden-xs">
+              <figure class="thumbnail">
+                <img class="img-responsive" src="
+                  <% if review.user.facebook_picture_url? %> <%= review.user.facebook_picture_url %>
+                    <% else %>
+                   <%= 'http://modexenergy.com/wp-content/themes/modex_wp/img/avatar.png' %>
+                  <% end %> " />
+              </figure>
+            </div>
+            <div class="col-md-10 col-sm-10">
+              <div class="panel panel-default arrow left">
+                <div class="panel-body">
+                  <header class="text-left">
+                    <div class="comment-user"><i class="fa fa-user"></i> <%= review.user.email %></div>
+                    <div class="comment-user"><i class="fa fa-user"></i> Rating: <%= review.rating %></div>
+                  </header>
+                  <div class="comment-post">
+                    <p>
+                      <%= review.description %>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+    </div>
+  <% end %>
+  </div>
+<!-- </div> -->
+
+
+

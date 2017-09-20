@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="title-new-article" id="presentation-profil">
+    <h4> Write your review</h4>
+  </div>
+  <div class="form">
+    <%= simple_form_for [@article, @review] do |f| %>
+      <%= f.input :title %>
+      <%= f.input :description, as: :text, input_html: {rows: 10, cols: 10} %>
+      <%= f.input :rating %>
+      <%= f.button :submit %>
+    <% end %>
+  </div>
+</div>
