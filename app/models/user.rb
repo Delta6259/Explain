@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   has_many :articles
+  has_many :reviews
   devise :omniauthable, omniauth_providers: [:facebook]
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable

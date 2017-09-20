@@ -10,4 +10,6 @@
 </div>
 <p>Vote for this article</p>
 <%= link_to "upvote", upvote_path(:id => @article.id), class: 'btn btn-warning' %>
+<%= link_to "Comment", new_article_review_path(@article), class: 'btn btn-warning' %>
+<%= link_to "Reviews", article_reviews_path(@article), class: 'btn btn-warning' %>
 <p><%= @article.vote %></p>

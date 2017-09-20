@@ -7,19 +7,6 @@ class ArticlesController < ApplicationController
       @articles = Article.all.order('vote DESC')
     end
 
-    # if params[:find] == "sport"
-    #   @articles = Article.where(category: "sport").order('vote DESC')
-    # elsif params[:find] == "actualité"
-    #   @articles = Article.where(category: "actualité").order('vote DESC')
-    # elsif params[:find] == "cinéma"
-    #   @articles = Article.where(category: "cinéma").order('vote DESC')
-    # elsif params[:find] == "cuisine"
-    #   @articles = Article.where(category: "cuisine").order('vote DESC')
-    # elsif params[:find] == "informatique"
-    #   @articles = Article.where(category: "informatique").order('vote DESC')
-    # else
-    #   @articles = Article.all.order('vote DESC')
-    # end
   end
 
   def show
