@@ -7,6 +7,7 @@ class ArticlesController < ApplicationController
       @articles = Article.all.order('vote DESC')
     end
 
+    reset_vote
   end
 
   def show
@@ -40,6 +41,13 @@ class ArticlesController < ApplicationController
   end
 
   private
+
+  def reset_vote
+    t = Time.now
+      if t.monday? == true
+        @articles.each { |article| article.update(vote: 0)}
+      end
+  end
 
   def article_params
     params.require(:article).permit(:id, :title, :description, :photo, :photo_cache, :category, :user_id, :vote)
