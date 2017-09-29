@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 ruby '2.3.4'
 
+gem 'remotipart', github: 'mshibuya/remotipart'
+gem 'rails_admin', '>= 1.0.0.rc'
 gem 'carrierwave', '~> 0.11.2'
 gem 'cloudinary'
 gem 'omniauth-facebook'
