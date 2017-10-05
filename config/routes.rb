@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  mount RailsAdmin::Engine => '/administrator', as: 'rails_admin'
   root to: 'pages#home'
   get '/profile', to: 'profiles#profile'
   get '/upvote', to: "articles#upvote"
