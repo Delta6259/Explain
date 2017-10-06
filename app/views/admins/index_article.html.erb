@@ -1,0 +1,7 @@
+<div class="container">
+<h3>List of articles ordered by stars</h3>
+  <% @articles.each do |article| %>
+    <ul><li><%= link_to article.title, admin_path(article) %></li></ul>
+  <% end %>
+</div>
+
