@@ -1,7 +1,11 @@
 <div class="container">
 <h3>List of articles ordered by stars</h3>
   <% @articles.each do |article| %>
-    <ul><li><%= link_to article.title, admin_path(article) %></li></ul>
+    <ul>
+      <%= link_to 'Destroy', article_path(article), :method => 'delete' %>   <%= link_to article.title, admin_path(article) %></i>
+      </li>
+    </ul>
   <% end %>
 </div>
+
 
