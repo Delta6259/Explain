@@ -1,5 +1,8 @@
 class AdminsController < ApplicationController
 
+  def dashboard
+  end
+
   def index_article
     @articles = Article.all.order('vote DESC')
   end
@@ -15,6 +18,9 @@ class AdminsController < ApplicationController
   end
 
   def delete_article
+    @article = Article.find(params[:id])
+    @article.delete
+    redirect_back(fallback_location: root_path)
   end
 
   def index_user

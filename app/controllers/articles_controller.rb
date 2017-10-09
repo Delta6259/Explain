@@ -33,6 +33,12 @@ class ArticlesController < ApplicationController
     end
   end
 
+  def destroy
+    @article = Article.find(params[:id])
+    @article.delete
+    redirect_back(fallback_location: root_path)
+  end
+
   def upvote
     if Article.increment_counter(:vote, params[:id])
       redirect_back(fallback_location: root_path)
