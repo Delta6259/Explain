@@ -23,6 +23,8 @@ gem 'jquery-rails'
 gem 'sass-rails'
 gem 'simple_form'
 gem 'uglifier'
+gem 'geocoder'
+gem 'nokogiri'
 
 group :development, :test do
   gem 'pry-byebug'

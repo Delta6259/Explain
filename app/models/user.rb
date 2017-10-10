@@ -1,11 +1,16 @@
 class User < ApplicationRecord
   has_many :articles
   has_many :reviews
+
+
   devise :omniauthable, omniauth_providers: [:facebook]
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+  geocoded_by :city
+  after_validation :geocode, if: :city_changed?
 
   def self.find_for_facebook_oauth(auth)
     user_params = auth.slice(:provider, :uid)
