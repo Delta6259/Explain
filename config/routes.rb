@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'admins/dashboard'
   get '/profile', to: 'profiles#profile'
   get '/upvote', to: "articles#upvote"
-
+  match 'users/:id' => 'users#destroy', :via => :delete, :as => :admin_destroy_user
 
   resources :admins, except: [:index, :new, :create, :edit, :update, :destroy] do
   collection do

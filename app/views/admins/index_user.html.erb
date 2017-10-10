@@ -4,6 +4,7 @@
       <ul><%= user.email %></ul>
       <ul><%= user.first_name %></ul>
       <ul><%= user.last_name %></ul>
+      <%= link_to "Destroy", admin_destroy_user_path(user), method: :delete, data: { confirm: "You sure?" } %>
   <% end %>
 </div>
 

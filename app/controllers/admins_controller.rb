@@ -27,15 +27,6 @@ class AdminsController < ApplicationController
     @users = User.all.order(:id)
   end
 
-  def new_user
-  end
-
-  def create_user
-  end
-
-  def delete_user
-  end
-
   def index_review
   end
 
