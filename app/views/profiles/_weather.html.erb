@@ -1,0 +1,23 @@
+<div class="weather">
+  <div class="weather-content">
+    <div class="weather-icon">
+      <% if @weather_now_description == "Foggy" %>
+          <img src="https://cdn2.iconfinder.com/data/icons/weather-color-2/500/weather-27-128.png" alt="weather icon">
+      <% else %>
+          <img src="http://www.pxleyes.com/images/contests/fog/thumb.jpg" alt="weather icon">
+      <% end %>
+    </div>
+    <div class="weather-description">
+      <div class="temp">
+        <div class="temp-c-and-description">
+          <p><%= @temperature_in_c %>°C</p>
+        </div>
+      </div>
+      <div class="description-of-weather">
+        <div class="temp-c-and-description">
+          <p><%= @weather_now_description %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
