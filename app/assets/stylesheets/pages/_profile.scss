@@ -2,3 +2,59 @@
   display: flex;
   justify-content: center;
 }
+
+.weather-city {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.weather-content {
+  width: 300px;
+  height: 150px;
+  background: #DCDCDC;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 200px;
+  border-radius: 1%;
+}
+
+.weather-icon {
+  margin-top: 10px;
+  width: 130px;
+  height: 130px;
+  background: #EBEBEC;
+}
+
+.weather-description {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  width: 150px;
+  height: 130px;
+  background: #EBEBEC;
+}
+
+.weather {
+  display: flex;
+  justify-content: center;
+}
+
+.temp {
+  width: 150px;
+  height: 65px;
+  background: #EBEBEB;
+  display: flex;
+  justify-content: center;
+}
+
+.description-of-weather {
+  width: 150px;
+  height: 65px;
+  background: #EBEBEB;
+  display: flex;
+  justify-content: center;
+}
+
+.temp-c-and-description {
+  margin-top: 15px;
+}

@@ -14,6 +14,5 @@
 
 
 <%= render '../views/articles/card_index' %>
-
-<h3> Le temps dans votre ville</h3>
-<p><%= @weather_now_description %> <%= @temperature_in_c %>°C</p>
+  <div class="weather-city"><h5>The weather in <%= @city %></h5></div>
+<%= render "weather" %>

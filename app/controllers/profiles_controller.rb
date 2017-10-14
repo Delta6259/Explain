@@ -5,6 +5,7 @@ class ProfilesController < ApplicationController
     @articles = current_user.articles.order('vote DESC')
     @latitude = current_user.latitude
     @longitude = current_user.longitude
+    @city = current_user.city
     weather
   end
 
@@ -18,8 +19,8 @@ class ProfilesController < ApplicationController
     meteo = JSON.parse(html_file)
     @weather_now_description = meteo['currently']['summary']
     temperature_in_f = meteo['currently']['temperature']
-    @temperature_in_c = (temperature_in_f - 32) * 5/9
-    @temperature_in_c.ceil
+    @temperature_in_c = (temperature_in_f.round - 32) * 5/9
+    @temperature_in_c.round
     # html_doc = Nokogiri::HTML(html_file)
     # html_doc.search('.k').each do |element|
     #   @content = element.text
