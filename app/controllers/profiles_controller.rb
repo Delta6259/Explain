@@ -13,7 +13,7 @@ class ProfilesController < ApplicationController
 
   def weather
     # scraping (voir cours scraping JSON)
-    url = "https://api.darksky.net/forecast/6919bc2ae7b083bdac732a36b67983b1/#{@latitude},#{@longitude}" # L'url retourne un JSON à scraper qui contient les informations essentielles.
+    url = "https://api.darksky.net/forecast/c5c21ebd6a677e1081160aa6b467bb6d/#{@latitude},#{@longitude}" # L'url retourne un JSON à scraper qui contient les informations essentielles.
 
     html_file = open(url).read
     meteo = JSON.parse(html_file)
