@@ -25,6 +25,7 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'geocoder'
 gem 'nokogiri'
+gem 'rspec-rails'
 
 group :development, :test do
   gem 'pry-byebug'
